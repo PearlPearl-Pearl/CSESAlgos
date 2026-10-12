@@ -1,42 +1,21 @@
 #include <iostream>
 
 void Repetition(std::string sequence){
-    int countA = 0;
-    int countC = 0;
-    int countG = 0;
-    int countT = 0;
+    int count = 1;
+    int max = 1;
 
-    int size = sizeof(sequence)/sizeof(int);
+    int lenSequence = sequence.length();
 
-    int max = 0;
-
-    for (int i=0; i<size-1; i++){
-        if (sequence[i] == 'A' && sequence[i+1]=='A'){
-            countA++;
+    for (int i=1; i<lenSequence; i++){
+        if (sequence[i] == sequence[i-1]){
+            count++;
+            if (count > max){max = count;}
         }
-        else if (sequence[i] == 'C' && sequence[i+1]=='C'){
-            countC++;
-        }
-        else if (sequence[i] == 'G' && sequence[i+1]=='G'){
-            countG++;
-        }
-        else if (sequence[i] == 'T' && sequence[i+1]=='T'){
-            countT++;
+        else{
+            count = 1;
         }
     }
-
-    max = countA;
-    if (countC > max){
-        max = countC;
-    }
-    else if (countG > max){
-        max = countG;
-    }
-    else if (countT > max){
-        max = countT;
-    }
-
-    std::cout << max+1;
+    std::cout << max;
 }
 
 
@@ -45,6 +24,7 @@ int main(){
     std::cin >> sequence;
     
     Repetition(sequence);
+    // Repetition("AAAACCCGGT");
 
     return 0;
 }
