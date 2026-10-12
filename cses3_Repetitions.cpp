@@ -24,7 +24,6 @@ int main(){
     std::cin >> sequence;
     
     Repetition(sequence);
-    // Repetition("AAAACCCGGT");
 
     return 0;
 }
