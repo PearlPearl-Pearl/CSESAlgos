@@ -14,10 +14,10 @@ long long twoKnights(const long long& k){
 }
 
 void completeSolution(const int& n){
-    std::cout << 0 << '\n';
-    std::cout << 6 << '\n';
-
-    for (int i=3; i<=n; i++){
+    for (int i=1; i<=n; i++){
+        if (n==1){
+            std::cout << 0 << '\n';
+        }
         long long ans = twoKnights(i);
         std::cout << twoKnights(i) << '\n';
     } 
