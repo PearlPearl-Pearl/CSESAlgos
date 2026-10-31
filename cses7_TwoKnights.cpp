@@ -18,8 +18,10 @@ void completeSolution(const int& n){
         if (n==1){
             std::cout << 0 << '\n';
         }
+        else{
         long long ans = twoKnights(i);
         std::cout << twoKnights(i) << '\n';
+        }
     } 
 }
 
