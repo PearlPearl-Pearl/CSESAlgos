@@ -7,7 +7,7 @@ long long combination_with2(const long long& n){
 }
 
 
-long long twoKnights(const int& k){
+long long twoKnights(const long long& k){
     long long result = combination_with2(k) - (4*(k-1)*(k-2));
     
     return result;
